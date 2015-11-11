@@ -10,6 +10,6 @@ import javax.servlet.http.*;
 public class MtaprojlinoyServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
-		resp.getWriter().println("Hello, Linoy");
+		resp.getWriter().println("Hello, Linoy and Idan");
 	}
 }
