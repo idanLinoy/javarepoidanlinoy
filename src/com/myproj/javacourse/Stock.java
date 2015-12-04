@@ -1,7 +1,6 @@
 package com.myproj.javacourse;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Stock {
@@ -10,9 +9,9 @@ public class Stock {
 	private float ask;
 	private float bid;
 	private Date date;
-	SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy/MM/dd");
+	SimpleDateFormat dateFormater = new SimpleDateFormat("MM/dd/yyyy");
 	
-	public Stock(String symbol, float ask, float bid, Date date){
+	public Stock(String symbol, float ask, float bid, Date date) {
 		this.symbol = symbol;
 		this.ask = ask;
 		this.bid = bid;
