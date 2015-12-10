@@ -1,14 +1,16 @@
 package com.myproj.javacourse.service;
 import java.util.Calendar;
-
-import com.myproj.javacourse.Stock;
+import com.myproj.javacourse.model.Stock;
 import com.myproj.javacourse.model.Portfolio;
 
+/**
+ * This class represents a portfolio manager that generates a portfolio
+ */
 public class PortfolioManager {
 	
 	public Portfolio getPortfolio() {
 		Stock stock1, stock2, stock3;
-		Portfolio portfolio = new Portfolio();
+		Portfolio portfolio = new Portfolio("Portfolio #1", 0);
 		
 		Calendar cal = Calendar.getInstance();
 		cal.set(2014, 10, 15);
@@ -23,4 +25,5 @@ public class PortfolioManager {
 		
 		return portfolio;
 	}
+	
 }
