@@ -4,21 +4,18 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.myproj.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
+
 /**
  * This class represents a stock in the stock market
  * @authors Linoy&Idan
  */
 public class Stock {
 	
-	private final static int BUY = 0;
-	private final static int  SELL = 1;
-	private final static int REMOVE = 2;
-	private final static int HOLD = 3;
-	
 	private final String symbol;
 	private float ask;
 	private float bid;
-	private int recommendation;
+	private ALGO_RECOMMENDATION recommendation;
 	private int stockQuantity;
 	
 	private Date date;
@@ -81,13 +78,21 @@ public class Stock {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
+	public int getStockQuantity() {
+		return stockQuantity;
+	}
+
+	public void setStockQuantity(int stockQuantity) {
+		this.stockQuantity = stockQuantity;
+	}
 	/**
 	 * This method returns a String of stock's details
 	 */
 	public String getHtmlDescription(){
 		String date = this.dateFormater.format(this.date);
-		String stockDetails = "<b>Stock symbol:</b>  " + this.symbol + " <b>Ask:</b>  " + this.ask + " <b>Bid:</b>  " + this.bid + " <b>Date:</b>  " + date;
+		String stockDetails = "<b>Stock symbol:</b>  " + this.symbol + " <b>Ask:</b>  " + this.ask + " <b>Bid:</b>  " + this.bid + " <b>Date:</b>  " + date +" <b>Quantity:</b> " + this.stockQuantity;
 		return stockDetails;
 	}
+
+
 }
