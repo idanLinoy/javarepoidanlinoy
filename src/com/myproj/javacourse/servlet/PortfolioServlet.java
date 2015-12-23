@@ -1,13 +1,12 @@
 package com.myproj.javacourse.servlet;
 import java.io.IOException;
-
 import javax.servlet.http.*;
-
 import com.myproj.javacourse.model.Portfolio;
 import com.myproj.javacourse.service.PortfolioManager;
+
 /**
  * 
- * @author Linoy
+ * @authors Linoy&Idan
  *
  */
 @SuppressWarnings("serial")
@@ -17,8 +16,9 @@ public class PortfolioServlet extends HttpServlet {
 		
 		resp.setContentType("text/html");
 		PortfolioManager portfolioManager = new PortfolioManager();
-		Portfolio portfolio = portfolioManager.getPortfolio();
-		resp.getWriter().println(portfolio.getHtmlString());
+		Portfolio portfolio1 = portfolioManager.getPortfolio();
+		
+		resp.getWriter().println(portfolio1.getHtmlString());
 	}
 	
 }
